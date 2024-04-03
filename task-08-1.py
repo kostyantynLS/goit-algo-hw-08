@@ -3,7 +3,6 @@ from collections import UserDict
 import datetime
 from functools import wraps
 import pickle
-import os
 
 class Field:
     def __init__(self, value):
@@ -309,11 +308,7 @@ def main():
     #fn
     adrbookname = "addressbook.pkl"
     # Створення нової адресної книги
-    
-    if  os.path.exists(adrbookname):
-        book = load_data(adrbookname)
-    else:
-        book = AddressBook()
+    book = load_data(adrbookname)
 
     CLI_header = '****************************************\n'\
                  '**         command line assistant     **\n'\
