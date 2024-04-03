@@ -310,9 +310,10 @@ def main():
     adrbookname = "addressbook.pkl"
     # Створення нової адресної книги
     
-    book = AddressBook()
     if  os.path.exists(adrbookname):
         book = load_data(adrbookname)
+    else:
+        book = AddressBook()
 
     CLI_header = '****************************************\n'\
                  '**         command line assistant     **\n'\
